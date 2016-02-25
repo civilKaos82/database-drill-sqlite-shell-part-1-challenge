@@ -7,7 +7,7 @@
 
 ##Summary 
 
-Let's jump into more complex SQL with a relatively large database of students.  [Download the 'students.db' file](https://github.com/downloads/dbc-challenges/binary_store/DB02_SQL_students.db).
+Let's jump into more complex SQL with a relatively large database of students.
 
 Load up the DB file into sqlite3 - `sqlite3 students.db`.  You should now be in SQLite shell.
 
@@ -28,11 +28,11 @@ Which student has the ID 13?  Ooooooo, that's unlucky.  Who has the ID 77?  Reme
 
 ###Release 1 : Where, Count, and Exporting
 
-Create a list of all the male students.  How about the female students?  How many men are there?  How many women?  Use the `COUNT` function.
+Create a list of all the students with straight hair.  How about curly hair?  How many students with curly hair are there?  How many students with straight hair?  Use the `COUNT` function.
 
-Let's put the list of all the female students in a file.  Type `.output female_students.txt`.  Now do the query for the female students.  The list shouldn't be shown on your terminal, but it should now be saved in the file.
+Let's put the list of all the curly haired students in a file.  Type `.output curly_haired_students.txt`.  Now do the query for the curly haired students.  The list shouldn't be shown on your terminal, but it should now be saved in the file.
 
-Type `.quit` and then `subl female_students.txt`.  You should see the big file of all the female students!  Make sure your `sql_history` file is there by typing `ls`.
+Type `.quit` and then `subl curly_haired_students.txt`.  You should see the big file of all the students with curly hair!  Make sure your `sql_history` file is there by typing `ls`.
 
 Then start up the database again `sqlite3 students.db`.  Let's change the output back to the terminal or STDOUT.  Type `.output stdout`.
 
@@ -46,13 +46,13 @@ Find all the people that have a phone number with an extension.  (Look at the wh
 
 ###Release 3 : Group and Count
 
-Create a count of the male and female students.  Use the `GROUP` method to create a nice clean output that shows just the gender name and count.  Like this:
+Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the gender name and count.  Like this:
 
 ```
-gender      COUNT(gender)
+hair type      COUNT(hair_type)
 ----------  -------------
-female      462
-male        516
+curly          516
+straight       484
 ```
 
 This is trickier... You may have to search up the answer or ask your fellow boots!
