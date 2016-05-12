@@ -1,14 +1,13 @@
 # SQL Queries:  Part Orders
 
-##Summary 
+## Summary 
+This challenge will build on the SQL queries that we've already written.  We'll be writing more complex queries making use of groupings, the [like operator][SQLite like operator] [SQLite aggregate functions][], and [subqueries][SQLite subqueries].
 
-Let's jump into more complex SQL with a relatively large database of students.
-
-Load up the DB file into sqlite3 - `sqlite3 students.db`.  You should now be in SQLite shell.
-
-Orient yourself by typing `.schema`.  Notice all the columns that are available to query!  See if there are other database tables by typing `.tables`.  See all the database files open by typing `.databases`.
 
 ##Releases
+### Pre-release:  Review the Schema
+Orient yourself by typing `.schema`.  Notice all the columns that are available to query!  See if there are other database tables by typing `.tables`.  See all the database files open by typing `.databases`.
+
 
 ###Release 0 : Select and Trace
 
@@ -66,3 +65,9 @@ Quit out of sqlite, do `subl sql_history.txt`, and paste the history of all your
 ##Optimize Your Learning 
 
 ##Resources
+
+
+[SQLite aggregate functions]: https://www.sqlite.org/lang_aggfunc.html
+[SQLite like operator]: http://www.tutorialspoint.com/sqlite/sqlite_like_clause.htm
+[SQLite subqueries]: http://www.techonthenet.com/sqlite/subqueries.php
+
