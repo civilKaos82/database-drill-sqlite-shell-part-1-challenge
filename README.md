@@ -1,9 +1,4 @@
 # SQL Queries:  Part Orders
- 
-##Learning Competencies 
-
-* Use SQLite and the SQLite console to query data
-* Use common SQL Queries to view specific data
 
 ##Summary 
 
