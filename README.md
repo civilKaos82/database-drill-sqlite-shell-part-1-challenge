@@ -9,18 +9,7 @@ This challenge will build on the SQL queries that we've already written.  We'll 
 We're going to work with the database `orders.db`.  Get oriented by reviewing the `.schema`.  Take note of the tables and their columns.  It might help to break out the [Schema Designer][] and model the schema visually.
 
 
-###Release 0 : Select and Trace
-
-Go ahead and make a giant list of all the students using a `SELECT` statement.  Show all the columns.
-
-Since we are just learning, let's turn on "tracing" so we'll have a file of all the queries we're doing for this challenge.  Type `.trace sql_history.txt`.  Now all the commands will be saved!
-
-**NOTE**: '.trace' only works with the latest version of sqlite3.  If you are having problems running it on a DBC machine, quit out of the sqlite3 console and type `brew link sqlite3` from the command line. Then, start a new Terminal session (close the window and open a new one) and you should be running with the latest version.
-
-
-Which student has the ID 13?  Ooooooo, that's unlucky.  Who has the ID 77?  Remember the `WHERE` function?
-
-###Release 1 : Where, Count, and Exporting
+### Release 0: Where, Count, and Exporting
 
 Create a list of all the students with straight hair.  How about curly hair?  How many students with curly hair are there?  How many students with straight hair?  Use the `COUNT` function.
 
@@ -30,7 +19,7 @@ Type `.quit` and then `subl curly_haired_students.txt`.  You should see the big 
 
 Then start up the database again `sqlite3 students.db`.  Let's change the output back to the terminal or STDOUT.  Type `.output stdout`.
 
-###Release 2 : The LIKE method
+###Release 1: The LIKE method
 
 Let's play around with SQLite's `LIKE` method.  It works similar to regular expressions, but with it's own syntax.  See if you can figure out the below calls:
 
@@ -38,7 +27,7 @@ Create a list of all the people with .com email addresses.  List only their name
 
 Find all the people that have a phone number with an extension.  (Look at the whole list to make sure you are matching the different variations of an extension - ie `x3467` or `x29987`)  Create an alphabetical list of all the people with an extension on their phone number AND have a ".com" email address.
 
-###Release 3 : Group and Count
+###Release 2: Group and Count
 
 Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the hair type and count.  Like this:
 
@@ -51,7 +40,7 @@ straight       484
 
 This is trickier... You may have to search up the answer or ask your fellow boots!
 
-###Release 4 : Ordering and Limiting
+###Release 3: Ordering and Limiting
 
 Order everyone by birthdate in ascending order.  Order alphabetically by last name.  Now first name?  Now list only the first and last names and their birthday.  And then order those names by birthdate in descending order!
 
