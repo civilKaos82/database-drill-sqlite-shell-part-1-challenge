@@ -4,9 +4,9 @@
 This challenge will build on the SQL queries that we've already written.  We'll be writing more complex queries making use of groupings, the [like operator][SQLite like operator] [SQLite aggregate functions][], and [subqueries][SQLite subqueries].
 
 
-##Releases
+## Releases
 ### Pre-release:  Review the Schema
-Orient yourself by typing `.schema`.  Notice all the columns that are available to query!  See if there are other database tables by typing `.tables`.  See all the database files open by typing `.databases`.
+We're going to work with the database `orders.db`.  Get oriented by reviewing the `.schema`.  Take note of the tables and their columns.  It might help to break out the [Schema Designer][] and model the schema visually.
 
 
 ###Release 0 : Select and Trace
@@ -67,6 +67,7 @@ Quit out of sqlite, do `subl sql_history.txt`, and paste the history of all your
 ##Resources
 
 
+[Schema Designer]: https://schemadesigner.devbootcamp.com
 [SQLite aggregate functions]: https://www.sqlite.org/lang_aggfunc.html
 [SQLite like operator]: http://www.tutorialspoint.com/sqlite/sqlite_like_clause.htm
 [SQLite subqueries]: http://www.techonthenet.com/sqlite/subqueries.php
