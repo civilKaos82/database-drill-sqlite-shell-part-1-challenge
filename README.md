@@ -34,10 +34,6 @@ This is trickier... You may have to search up the answer or ask your fellow boot
 5. Order everyone by birthdate in ascending order.  Order alphabetically by last name.  Now first name?  Now list only the first and last names and their birthday.  And then order those names by birthdate in descending order!
 
 6. Then list just the oldest 10 students.  Now list the youngest 10 students.
-
-Is the SQL coming back to you?  Find a cheat sheet for reference if you need to!
-
-Quit out of sqlite, do `subl sql_history.txt`, and paste the history of all your SQL commands into the source file `sqllite_shell_1.md`.  Add comments to organize these commands. 
  
 
 ##Optimize Your Learning 
