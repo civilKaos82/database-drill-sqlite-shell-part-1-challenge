@@ -9,15 +9,10 @@ This challenge will build on the SQL queries that we've already written.  We'll 
 We're going to work with the database `orders.db`.  Get oriented by reviewing the `.schema`.  Take note of the tables and their columns.  It might help to break out the [Schema Designer][] and model the schema visually.
 
 
-### Release 0: Where, Count, and Exporting
+### Release 0: Where, Count
 
 Create a list of all the students with straight hair.  How about curly hair?  How many students with curly hair are there?  How many students with straight hair?  Use the `COUNT` function.
 
-Let's put the list of all the curly haired students in a file.  Type `.output curly_haired_students.txt`.  Now do the query for the curly haired students.  The list shouldn't be shown on your terminal, but it should now be saved in the file.
-
-Type `.quit` and then `subl curly_haired_students.txt`.  You should see the big file of all the students with curly hair!  Make sure your `sql_history` file is there by typing `ls`.
-
-Then start up the database again `sqlite3 students.db`.  Let's change the output back to the terminal or STDOUT.  Type `.output stdout`.
 
 ###Release 1: The LIKE method
 
