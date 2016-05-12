@@ -1,4 +1,4 @@
-# Database Drill Sqlite Shell Part 1 
+# SQL Queries:  Part Orders
  
 ##Learning Competencies 
 
