@@ -10,7 +10,7 @@ We're going to work with the database `orders.db`.  Get oriented by reviewing th
 
 
 ### Release 0:  Query the Database
-For each of the data requests below, write a SQL query that will retrieve the appropriate data. Copy the working query for each request in the file queries.md.
+For each of the data requests below, write a single SQL query that will retrieve the requested data. Copy the working query for each request to the file `queries.md`.
 
 If we want to double-check the results of our queries, each desired result set is recorded as a CSV file in the query_results directory—viewing the CSV files on GitHub will present them as nicely formatted tables.
 
