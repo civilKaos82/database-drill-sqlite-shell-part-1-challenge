@@ -21,33 +21,3 @@ Paste SQL query here.
   ```sql
 Paste SQL query here.
 ```
-
-5.
-  ```sql
-Paste SQL query here.
-```
-
-6.
-  ```sql
-Paste SQL query here.
-```
-
-7.
-  ```sql
-Paste SQL query here.
-```
-
-8.
-  ```sql
-Paste SQL query here.
-```
-
-9.
-  ```sql
-Paste SQL query here.
-```
-
-10.
-  ```sql
-Paste SQL query here.
-```

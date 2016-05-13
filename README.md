@@ -1,7 +1,7 @@
 # SQL Queries:  Part Orders
 
 ## Summary 
-This challenge will build on the SQL queries that we've already written.  We'll be writing more complex queries making use of groupings, the [like operator][SQLite like operator] [SQLite aggregate functions][], and [subqueries][SQLite subqueries].
+This challenge will build on the SQL queries that we've already written.  We'll be writing more complex queries that make use of GROUP BY and HAVING, the [LIKE][SQLite like operator] operator, SQLite [aggregate functions][sqlite aggregate functions], SQLite [DATE functions][sqlite date functions], and [subqueries][SQLite subqueries].
 
 
 ## Releases
@@ -23,30 +23,7 @@ If we want to double-check the results of our queries, each desired result set i
 
   *Note:* Don't hardcode values related to the part ordered the most times.
   
-4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that that each supplier's parts were received.
-
-
-
-Let's play around with SQLite's `LIKE` method.  It works similar to regular expressions, but with it's own syntax.  See if you can figure out the below calls:
-
-2. Create a list of all the people with .com email addresses.  List only their names and their email addresses.  How many .com email addresses are there?  How many .info?
-
-3. Find all the people that have a phone number with an extension.  (Look at the whole list to make sure you are matching the different variations of an extension - ie `x3467` or `x29987`)  Create an alphabetical list of all the people with an extension on their phone number AND have a ".com" email address.
-
-4. Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the gender name and count.  Like this:
-
-```
-hair type      COUNT(hair_type)
-----------  -------------
-curly          516
-straight       484
-```
-
-This is trickier... You may have to search up the answer or ask your fellow boots!
-
-5. Order everyone by birthdate in ascending order.  Order alphabetically by last name.  Now first name?  Now list only the first and last names and their birthday.  And then order those names by birthdate in descending order!
-
-6. Then list just the oldest 10 students.  Now list the youngest 10 students.
+4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that each supplier's parts were received.  Order the data by the average number of days late beginning with the highest average.
  
 
 ##Optimize Your Learning 
@@ -56,6 +33,7 @@ This is trickier... You may have to search up the answer or ask your fellow boot
 
 [Schema Designer]: https://schemadesigner.devbootcamp.com
 [SQLite aggregate functions]: https://www.sqlite.org/lang_aggfunc.html
+[SQLite date functions]: https://www.sqlite.org/lang_datefunc.html
 [SQLite like operator]: http://www.tutorialspoint.com/sqlite/sqlite_like_clause.htm
 [SQLite subqueries]: http://www.techonthenet.com/sqlite/subqueries.php
 
