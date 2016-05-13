@@ -24,8 +24,10 @@ If we want to double-check the results of our queries, each desired result set i
   *Note:* Don't hardcode values related to the part ordered the most times.
   
 4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that each supplier's parts were received.  Order the data by the average number of days late beginning with the highest average.
- 
 
+
+## Conclusion
+The queries we wrote in this challenge were a step up in complexity from other queries we've written.  We were able to explore some additional SQL operators, functions, and techniques.  We'll use some of them more often than other, but we should be somewhat familiar with all of them and how they allow us to manipulate the data in our databases. 
 
 
 [Schema Designer]: https://schemadesigner.devbootcamp.com
