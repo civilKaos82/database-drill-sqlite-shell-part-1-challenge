@@ -26,9 +26,6 @@ If we want to double-check the results of our queries, each desired result set i
 4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that each supplier's parts were received.  Order the data by the average number of days late beginning with the highest average.
  
 
-##Optimize Your Learning 
-
-##Resources
 
 
 [Schema Designer]: https://schemadesigner.devbootcamp.com
