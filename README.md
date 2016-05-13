@@ -15,9 +15,16 @@ For each of the data requests below, write a single SQL query that will retrieve
 If we want to double-check the results of our queries, each desired result set is recorded as a CSV file in the query_results directory—viewing the CSV files on GitHub will present them as nicely formatted tables.
 
 
+1. Generate a report for parts ordered more than five times. The report should contain the number of times the part has been ordered, the part name, and the part code.  Order the data by the number of times the part was ordered from most to least and then alphabetically by name.
 
+2. Our Engineering Department has designed a new part that needs to be made of copper.  We want to contact our suppliers who produce copper parts to get quotes for how much each would charge to make the part.  Generate a report with the name and phone number of any supplier from whom we've ordered copper parts.  Order the data alphabetically by supplier name.
 
-1. Create a list of all the students with straight hair.  How about curly hair?  How many students with curly hair are there?  How many students with straight hair?  Use the `COUNT` function.
+3. For whichever part we've ordered most frequently, generate a report on the delivery performance of each time the part was ordered.  Include the part's id, the part's name, the order invoice number, the supplier's name, the date the part was ordered, the date the part was expected, the date the part was received, and the number of days the delivery was late.  Order the data based on the order date beginning with the most recent order.
+
+  *Note:* Don't hardcode values related to the part ordered the most times.
+  
+4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that that each supplier's parts were received.
+
 
 
 Let's play around with SQLite's `LIKE` method.  It works similar to regular expressions, but with it's own syntax.  See if you can figure out the below calls:
