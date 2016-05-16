@@ -46,7 +46,7 @@ Find all the people that have a phone number with an extension.  (Look at the wh
 
 ###Release 3 : Group and Count
 
-Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the gender name and count.  Like this:
+Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the hair type and count.  Like this:
 
 ```
 hair type      COUNT(hair_type)
