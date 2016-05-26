@@ -1,73 +1,38 @@
-# Database Drill Sqlite Shell Part 1 
- 
-##Learning Competencies 
+# SQL Queries:  Part Orders
 
-* Use SQLite and the SQLite console to query data
-* Use common SQL Queries to view specific data
-
-##Summary 
-
-Let's jump into more complex SQL with a relatively large database of students.
-
-Load up the DB file into sqlite3 - `sqlite3 students.db`.  You should now be in SQLite shell.
-
-Orient yourself by typing `.schema`.  Notice all the columns that are available to query!  See if there are other database tables by typing `.tables`.  See all the database files open by typing `.databases`.
-
-##Releases
-
-###Release 0 : Select and Trace
-
-Go ahead and make a giant list of all the students using a `SELECT` statement.  Show all the columns.
-
-Since we are just learning, let's turn on "tracing" so we'll have a file of all the queries we're doing for this challenge.  Type `.trace sql_history.txt`.  Now all the commands will be saved!
-
-**NOTE**: '.trace' only works with the latest version of sqlite3.  If you are having problems running it on a DBC machine, quit out of the sqlite3 console and type `brew link sqlite3` from the command line. Then, start a new Terminal session (close the window and open a new one) and you should be running with the latest version.
+## Summary 
+This challenge will build on the SQL queries that we've already written.  We'll be writing more complex queries that make use of GROUP BY and HAVING, the [LIKE][SQLite like operator] operator, SQLite [aggregate functions][sqlite aggregate functions], SQLite [DATE functions][sqlite date functions], and [subqueries][SQLite subqueries].
 
 
-Which student has the ID 13?  Ooooooo, that's unlucky.  Who has the ID 77?  Remember the `WHERE` function?
+## Releases
+### Pre-release:  Review the Schema
+We're going to work with the database `orders.db`.  Get oriented by reviewing the `.schema`.  Take note of the tables and their columns.  It might help to break out the [Schema Designer][] and model the schema visually.
 
-###Release 1 : Where, Count, and Exporting
 
-Create a list of all the students with straight hair.  How about curly hair?  How many students with curly hair are there?  How many students with straight hair?  Use the `COUNT` function.
+### Release 0:  Query the Database
+For each of the data requests below, write a single SQL query that will retrieve the requested data. Copy the working query for each request to the file `queries.md`.
 
-Let's put the list of all the curly haired students in a file.  Type `.output curly_haired_students.txt`.  Now do the query for the curly haired students.  The list shouldn't be shown on your terminal, but it should now be saved in the file.
+If we want to double-check the results of our queries, each desired result set is recorded as a CSV file in the query_results directory—viewing the CSV files on GitHub will present them as nicely formatted tables.
 
-Type `.quit` and then `subl curly_haired_students.txt`.  You should see the big file of all the students with curly hair!  Make sure your `sql_history` file is there by typing `ls`.
 
-Then start up the database again `sqlite3 students.db`.  Let's change the output back to the terminal or STDOUT.  Type `.output stdout`.
+1. Generate a report for parts ordered more than five times. The report should contain the number of times the part has been ordered, the part name, and the part code.  Order the data by the number of times the part was ordered from most to least and then alphabetically by name.
 
-###Release 2 : The LIKE method
+2. Our Engineering Department has designed a new part that needs to be made of copper.  We want to contact our suppliers who produce copper parts to get quotes for how much each would charge to make the part.  Generate a report with the name and phone number of any supplier from whom we've ordered copper parts.  Order the data alphabetically by supplier name.
 
-Let's play around with SQLite's `LIKE` method.  It works similar to regular expressions, but with it's own syntax.  See if you can figure out the below calls:
+3. For whichever part we've ordered most frequently, generate a report on the delivery performance of each time the part was ordered.  Include the part's id, the part's name, the order invoice number, the supplier's name, the date the part was ordered, the date the part was expected, the date the part was received, and the number of days the delivery was late.  Order the data based on the order date beginning with the most recent order.
 
-Create a list of all the people with .com email addresses.  List only their names and their email addresses.  How many .com email addresses are there?  How many .info?
+  *Note:* Don't hardcode values related to the part ordered the most times.
+  
+4. We want to review the delivery performance of our most frequent suppliers.  Generate a report with the names of any suppliers from whom we've ordered more than twenty parts.  Include the average number of days late that each supplier's parts were received.  Order the data by the average number of days late beginning with the highest average.
 
-Find all the people that have a phone number with an extension.  (Look at the whole list to make sure you are matching the different variations of an extension - ie `x3467` or `x29987`)  Create an alphabetical list of all the people with an extension on their phone number AND have a ".com" email address.
 
-###Release 3 : Group and Count
+## Conclusion
+The queries we wrote in this challenge were a step up in complexity from other queries we've written.  We were able to explore some additional SQL operators, functions, and techniques.  We'll use some of them more often than other, but we should be somewhat familiar with all of them and how they allow us to manipulate the data in our databases. 
 
-Create a count of the two hair types, curly and straight.  Use the `GROUP` method to create a nice clean output that shows just the gender name and count.  Like this:
 
-```
-hair type      COUNT(hair_type)
-----------  -------------
-curly          516
-straight       484
-```
+[Schema Designer]: https://schemadesigner.devbootcamp.com
+[SQLite aggregate functions]: https://www.sqlite.org/lang_aggfunc.html
+[SQLite date functions]: https://www.sqlite.org/lang_datefunc.html
+[SQLite like operator]: http://www.tutorialspoint.com/sqlite/sqlite_like_clause.htm
+[SQLite subqueries]: http://www.techonthenet.com/sqlite/subqueries.php
 
-This is trickier... You may have to search up the answer or ask your fellow boots!
-
-###Release 4 : Ordering and Limiting
-
-Order everyone by birthdate in ascending order.  Order alphabetically by last name.  Now first name?  Now list only the first and last names and their birthday.  And then order those names by birthdate in descending order!
-
-Then list just the oldest 10 students.  Now list the youngest 10 students.
-
-Is the SQL coming back to you?  Find a cheat sheet for reference if you need to!
-
-Quit out of sqlite, do `subl sql_history.txt`, and paste the history of all your SQL commands into the source file `sqllite_shell_1.md`.  Add comments to organize these commands. 
- 
-
-##Optimize Your Learning 
-
-##Resources
